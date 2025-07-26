@@ -5,7 +5,10 @@ function CoursesContent() {
     <div className={css.mainCont}>
         <div className={css.firstCont}>
             <p className={css.blackBack} />
-            <video autoPlay muted loop className={css.firstVid}> <source src="../../public/Сайт1.mp4" /></video>
+            <video autoPlay muted loop className={css.firstVid}>
+                <source src="/Сайт1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             <div className={css.imgBlock}>
                 <img src="../../public/gosha.png" alt="первый курс" />
             </div>
