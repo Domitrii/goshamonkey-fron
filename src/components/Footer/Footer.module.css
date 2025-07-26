@@ -29,3 +29,17 @@
     align-items: center;
     justify-content: space-around;
 }
+
+@media screen and (min-width: 380px) and (max-width: 768px) {
+
+    .firstFooterBlock {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+
+
+
+}

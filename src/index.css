@@ -22,3 +22,12 @@ ul {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+@media screen and (min-width: 380px) and (max-width: 768px) {
+
+    .first {
+        background-size: auto;
+    }
+
+
+}

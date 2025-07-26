@@ -33,7 +33,6 @@
     display: flex;
     gap: 40px;
     margin-top: 40px;
-
 }
 
 .buttons .btn {
@@ -62,4 +61,48 @@
     background: rgb(49, 110, 50);
     color: white;
     cursor: pointer;
+}
+
+
+@media screen and (min-width: 380px) and (max-width: 768px) {
+ 
+    .mainContent div h3 {
+        font-size: 16px;
+    }
+
+    .mainContent div h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+
+    .mainContent div p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .buttons .btn {
+        padding: 4px 8px;
+        border-radius: 28px;
+        border: 1px solid rgb(49, 110, 50);
+        background: none;
+        width: 200px;
+        color: white;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        justify-content: center;
+    }
+
+    .mainContent{
+        display: flex;
+        height: 800px;
+        background-repeat: no-repeat;
+        align-items: end;
+        padding: 40px 60px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
 }
