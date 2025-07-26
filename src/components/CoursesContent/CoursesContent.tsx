@@ -10,7 +10,7 @@ function CoursesContent() {
                 Your browser does not support the video tag.
             </video>
             <div className={css.imgBlock}>
-                <img src="../../public/gosha.png" alt="первый курс" />
+                <img src="/gosha.png" alt="первый курс" />
             </div>
             <div className={css.courseFirstText}>
                 <h2>Создание Вирусных Персонажей с ИИ</h2>
@@ -51,9 +51,12 @@ function CoursesContent() {
         </div>
         <div className={css.secondCont}>
             <p className={css.blackBack} />
-            <video autoPlay muted loop className={css.firstVid}> <source src="../../public/Сайт2.mp4" /></video>
+            <video autoPlay muted loop className={css.firstVid}>
+              <source src="/Сайт2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className={css.imgBlock}>
-                <img src="../../public/goshaPremium.png" alt="второй курс" />
+                <img src="/goshaPremium.png" alt="второй курс" />
             </div>
             <div className={css.courseFirstText}>
                 <h2>PREMIUM-Редакция 1:1</h2>
