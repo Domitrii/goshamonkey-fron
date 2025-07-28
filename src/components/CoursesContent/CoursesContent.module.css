@@ -119,6 +119,22 @@
     margin-bottom: 24px;
 }
 
+.firstVid::-webkit-media-controls {
+  display: none !important;
+}
+
+.firstVid::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.firstVid::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.firstVid::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
 @media screen and (min-width: 380px) and (max-width: 767px) {
 
     .firstCont {

@@ -4,8 +4,8 @@ import AllSection from '../AllSection/AllSection'
 
 
 const products = [
-    {img: "../../../goshaPremium.png",text: "Премиальный курс Гоши",price: "74₽",index: "courses"},
-    {img: "../../../gosha.png",text: "Курс Гоши",price: "74₽",index: "courses"},
+    {img: "../../../goshaPremium.png",text: "Премиальный курс Гоши",price: " $350.00",index: "courses"},
+    {img: "../../../gosha.png",text: "Курс Гоши",price: "$55.00",index: "courses"},
     {img: "../../../course1.png",text: "Привет от Гоши",price: "100₽",index: "hi-price"},
     {img: "../../../course1.png",text: "Привет от Гоши и Льохи",price: "100₽",index: "hi-price"},
 ]

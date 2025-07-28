@@ -1,6 +1,6 @@
 .ProductsBlock {
     padding: 60px 120px;
-    background-color: rgba(21, 41, 33, 1);
+    background-color: var(--dark);
     display: flex;
     gap: 40px;
 }
