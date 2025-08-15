@@ -1,8 +1,21 @@
-
-
 .footerCont{
     background-color: var(--back);
-    padding: 60px 120px;
+    padding: 60px 200px;
+}
+
+.footerBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.firstFooterBlock {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 30px;
+    font-family: "Inter", sans-serif;
+
 }
 
 .list{
@@ -10,24 +23,33 @@
     gap: 20px;
 }
 
-.list li {
-    width: 40px;
-    height: 40px;
+.list li a {
+    color: white;
     display: flex;
     align-items: center;
+    width: 50px;
+    height: 50px;
+    /* background-color: black; */
     justify-content: center;
-    background-color: black;
+    align-items: center;
     border-radius: 50%;
 }
 
-.list li a {
-    color: white;
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-.firstFooterBlock {
+.icon {
+    width: 28px;
+    height: 28px;
+}
+
+.ALl_Rights {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    margin: auto 0;
 }
 
 @media screen and (min-width: 380px) and (max-width: 768px) {

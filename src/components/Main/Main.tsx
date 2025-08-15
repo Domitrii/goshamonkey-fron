@@ -9,8 +9,8 @@ function Main() {
             <h1>Гоша Бомжезьян</h1>
             <p>Здесь вы можете найти курсы по созданию видео как у Гоши Бомжезьяна. Или получить привет от него.</p>
             <ul className={css.buttons}>
-                <NavLink to='/hi-price' className={css.btn}>Hi Price</NavLink>
-                <NavLink to='/courses' className={css.btn}>Courses</NavLink>
+                <NavLink to='/courses' className={css.btn}>Научитесь ТВОРИТЬ с помощью ИИ</NavLink>
+                <NavLink to='/hi-price' className={css.btn}>Я хочу персональный привет</NavLink>
                 {/* <li><button>Contact</button></li> */}
             </ul>
         </div>

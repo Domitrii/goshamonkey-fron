@@ -1,5 +1,6 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Oswald", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -7,6 +8,7 @@
   --back: #1A1A1A;
   --dark: #0c0f0a;
   --green: rgba(21, 41, 33, 1);
+  --light_green: rgb(49, 110, 50);
 }
 
 *{

@@ -4,10 +4,10 @@ import AllSection from '../AllSection/AllSection'
 
 
 const products = [
-    {img: "../../../goshaPremium.png",text: "Премиальный курс от Гоши-Бомжезьяна",price: " $350.00",index: "courses"},
-    {img: "../../../gosha.png",text: "Персональный курс от Гоши-Бомжезьяна",price: "$55.00",index: "courses"},
-    {img: "../../../course1.png",text: "Персональный привет от Гоши-Бомжезьяна",price: "100₽",index: "hi-price"},
-    {img: "../../../course1.png",text: "Привет от Гоши и Льохи",price: "100₽",index: "hi-price"},
+    {img: "../../../goshaPremium.png",text: "Премиальный курс от Гоши Бомжезьяна",price: " $350.00",index: "courses"},
+    {img: "../../../gosha.png",text: "Персональный курс от Гоши Бомжезьяна",price: "$55.00",index: "courses"},
+    {img: "../../../course1.png",text: "Персональный привет от Гоши Бомжезьяна",price: "100₽",index: "hi-price"},
+    {img: "../../../course1.png",text: "Привет от Гоши Бомжезьяна и Льохи",price: "100₽",index: "hi-price"},
 ]
 
 function Products() {
@@ -39,22 +39,22 @@ function Products() {
   return (
     <div className={css.ProductsBlock}>
         <div className={css.NavigateBlock}>
-            <h2>Navigate</h2>
+            <h2>Сортировка</h2>
             <span className={css.line}></span>
             <ul className={css.navigatePanel}>
                 <li onClick={() => handleBtn(setIsAll, setIsCourses, setIsHi)} className={`${css.AllBtn} ${isAll ? css.BtnChoose : ""}`}>
-                    All
+                    - Всё
                 </li>
                 <li onClick={() => handleBtn(setIsCourses, setIsAll, setIsHi)} className={`${css.AllBtn} ${isCourses ? css.BtnChoose : ""}`}>
-                    Courses
+                    - Курсы
                 </li>
                 <li onClick={() => handleBtn(setIsHi, setIsAll, setIsCourses)} className={`${css.AllBtn} ${isHi ? css.BtnChoose : ""}`}>
-                    Hi
+                    - Персональные приветы, поздравления
                 </li>
             </ul>
         </div>
         <div className={css.AllBlock}>
-            <h1>All Products</h1>
+            <h1>Продукты</h1>
             <ul className={css.list}>
                 {filteredProducts.map((i, idx) => (
                     <AllSection
