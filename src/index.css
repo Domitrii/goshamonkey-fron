@@ -36,3 +36,17 @@ ul {
 
 
 }
+
+video {
+  /* Prevent video controls from showing */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* Ensure video stays in background */
+  pointer-events: none;
+  
+  /* Fix for some mobile browsers */
+  -webkit-playsinline: true;
+}

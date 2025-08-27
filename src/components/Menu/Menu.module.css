@@ -1,0 +1,42 @@
+
+
+.not__Menu {
+    display: none;
+}
+
+.Menu {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    background: white;
+    width: 260px;
+    padding: 10px 20px;
+    top: 0;
+    right: 0;
+    z-index: 130;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Menu__Content {
+    position: fixed;
+    background-color: white;
+}
+
+.Menu__Content__Close {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.Menu__Content__Links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Menu__Content__Links a {
+    color: #000;
+}

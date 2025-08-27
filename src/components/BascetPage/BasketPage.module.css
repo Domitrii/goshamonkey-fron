@@ -1,0 +1,169 @@
+.Basket__Back {
+    /* position: absolute; */
+    position: fixed;
+    background-color: black;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 110;
+}
+
+.not__Back{
+    display: none;
+}
+
+.Basket__Content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    z-index: 120;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 15px 24px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Basket__Content_open {
+    transform: translateX(0);
+}
+
+.Basket__Content__CloseBtn {
+    display: flex;
+    justify-content: end;
+}
+
+.Basket__Content__CloseBtn svg {
+    cursor: pointer;
+    color: black;
+    width: 20px;
+    height: 20px;
+}
+
+.Basket__Item_Content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 12px;
+}
+
+.Basket__List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.Basket__Item {
+    position: relative;
+    display: flex;
+    color: black;
+}
+
+.Basket__Item::after {
+    position: absolute;
+    width: 100%;
+    background-color: aqua;
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+
+.Basket__ItemImg{
+    width: 90px;
+    height: 100px;
+    background-color: black;
+}
+
+.No_Items{
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+    color: black;
+}
+
+.Basket__Item_Btn {
+    cursor: pointer;
+    color: black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Basket__Item_Btn:hover {
+    color: red;
+}
+
+.Basket__Item_Btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.Basket__Item_Btn:hover svg {
+    width: 20px;
+    height: 20px;
+    color: red;
+}
+
+.Basket__Item_Btn:hover {
+    color: red;
+    transition: color 0.3s ease-in-out;
+}
+
+.Basket__Item_Btn:hover svg {
+    width: 20px;
+    height: 20px;
+    color: red;
+    transition: color 0.3s ease-in-out;
+}  
+
+.Basket__Content__Payment{
+    border-top: 1px solid #f2f3f6;
+    padding: 20px 0;
+    color: black;
+    margin-top: auto;
+    height: 120px;
+    z-index: 130;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.Basket__Payment__Sum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Basket__Payment__Sum p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Pay_Btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 16px;
+    font-family: inherit;
+    color: #fff;
+    background-color: #357df9;
+    border-radius: 8px;
+    border:none;
+    transition: max-width .2s ease;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.Pay_Btn:hover {
+    background-color: #3072e3;
+}

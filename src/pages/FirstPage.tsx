@@ -1,18 +1,20 @@
 import { lazy } from "react"
 const Courses = lazy(() => import("../components/Courses/Courses"))
-const Header = lazy(() => import("../components/Header/Header"))
 const Main = lazy(() => import("../components/Main/Main"))
 const Products = lazy(() => import("../components/Products/Products"))
 import "../index.css"
 import Footer from "../components/Footer/Footer"
 
-function FirstPage() {
+type AddItemProps = {
+  addItem: (item: { img: string; text: string; price: string; index: string, inx: number }) => void;
+};
+
+function FirstPage({ addItem }: AddItemProps) {
   return (
     <div className="first">
-        <Header />
         <Main />
         <Courses />
-        <Products />
+        <Products addItem={addItem}/>
         <Footer />
     </div>
   )

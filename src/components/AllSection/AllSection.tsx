@@ -1,4 +1,3 @@
-import { NavLink } from "react-router"
 import css from "./AllSection.module.css"
 
 interface AllSectionProps {
@@ -6,15 +5,17 @@ interface AllSectionProps {
     text: string,
     price: string,
     index:string,
+    // inx: number
+    addItem: () => void;
 }
 
-function AllSection ({ img, text, price, index }: AllSectionProps) {
-    const handleConsole = () => {
-        console.log(`Clicked on ${text} with index ${index} and img ${img} and price ${price}`);
-    }
+function AllSection ({ img, text, price, index, addItem }: AllSectionProps) {
+    // const handleConsole = () => {
+    //     console.log(`Clicked on ${text} with index ${index} and img ${img} and price ${price}`);
+    // }
 
   return (
-    <li className={css.content}>
+    <li className={css.content} >
         <div className={css.picCont}>
             <img src={img} alt="фото курса" className={css.pic} id={index} />
         </div>
@@ -25,7 +26,13 @@ function AllSection ({ img, text, price, index }: AllSectionProps) {
             <p>
                 {price}
             </p>
-                {index == "courses" ? (<NavLink to={'/' + index} onClick={() => handleConsole()} className={css.btn}>Посмотреть курсы</NavLink>) : (<NavLink to={'/' + index} onClick={() => handleConsole()} className={css.btn}>Получить привет</NavLink>)}
+                {index == "courses" ? 
+                (<button onClick={addItem} className={css.btn}>
+                        Посмотреть курсы
+                </button>) : 
+                (<button className={css.btn} onClick={addItem}>
+                        Получить привет
+                </button>)}
         </div>
     </li>
   )

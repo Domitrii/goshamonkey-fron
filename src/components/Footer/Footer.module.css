@@ -61,6 +61,28 @@
         justify-content: center;
     }
 
+    .footerCont {
+        padding: 20px;
+    }
+
+    .footerBlock {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .list {
+        justify-content: center;
+    }
+
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1439px) {
+
+    .footerCont{
+        padding: 40px;
+    }
 
 
 

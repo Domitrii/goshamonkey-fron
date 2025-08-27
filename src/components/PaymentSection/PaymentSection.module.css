@@ -1,9 +1,22 @@
-.picCont{
+.Payment{
+    width: 346px;
+    height: 562px;
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(23, 28, 22);
+}
+
+.Payment__Img{
     height: 387.5px;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-self: center;
-    border-bottom: 1px solid white;
+}
+
+.Payment__Img:hover {
+    transform: scale(1.2);
 }
 
 .line{
@@ -17,14 +30,24 @@
     max-height: 100%;
 }
 
-.content{
-    width: 346px;
-    height: 562px;
-    border: 2px solid white;
-    position: relative;
-    background-color: rgb(23, 28, 22);
+
+.Payment__Content {
+    width: 100%;
+    border-top: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
 }
 
-.textBlock {
-    width: 100%;
+.Payment__Content__Text{
+    font-size: 24px;
+}
+
+.Payment__Content__Price {
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+
+.Payment__Content__Btn{
+    margin-top: auto;
 }

@@ -1,19 +1,19 @@
 import Footer from "../Footer/Footer"
-import Header from "../Header/Header"
 import PaymentSection from "../PaymentSection/PaymentSection"
 import css from "./HiPrice.module.css"
 
 const hiProducts = [
-    {img: "../../../course1.png",text: "Гоша привет",price: "100р",index: "hi-price"},
-    {img: "../../../course1.png",text: "Гоша привет",price: "300р",index: "hi-price"},
-    {img: "../../../course1.png",text: "Гоша привет",price: "300р",index: "hi-price"},
-    {img: "../../../course1.png",text: "Гоша привет",price: "300р",index: "hi-price"},
+    {img: "../../../firstHi.png",text: "Персональный привет от Гоши Бомжезьяна",price: "$7.99",index: "hi-price"},
+    {img: "../../../secondHiLeha.png",text: "Персональный привет от Лёхи",price: "$7.99",index: "hi-price"},
+    {img: "../../../zefirkaHI.png",text: "Персональный привет от Зефирки",price: "$7.99",index: "hi-price"},
+    {img: "../../../G_L_Hi.png",text: "Персональный привет от Гоши Бомжезьяна и Лёхи",price: "$7.99",index: "hi-price"},
+    {img: "../../../All_Hi.png",text: "Привет от Гоши Бомжезьяна и друзей",price: "$7.99",index: "hi-price"},
+    {img: "../../../question-mark.png",text: "Закажи персональный привет от кого захочешь",price: "$7.99",index: "hi-price"},
 ]
 
 function HiPrice() {
   return (
     <div>
-        <Header />
         <div>
             <div className={css.hiPriceStartBlock}>
                 <h1 className={css.title}>Персональные приветы</h1>

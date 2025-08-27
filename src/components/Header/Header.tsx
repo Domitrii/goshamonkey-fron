@@ -1,8 +1,15 @@
 import { NavLink } from 'react-router'
 import css from './Header.module.css'
 import { GrShop } from "react-icons/gr";
+import { MdOutlineMenu } from "react-icons/md";
 
-function Header() {
+type HeaderProps = {
+  Basket: () => void;
+  MenuOpen: () => void;
+};
+
+function Header({ Basket, MenuOpen }: HeaderProps) {
+
   return (
     <div className={css.navBar}>
       <div className={css.navBarContent}>
@@ -28,8 +35,11 @@ function Header() {
                 Персональные приветы
               </NavLink>
             </li>
-            <li className={css.shopIcon}>
-                <GrShop className={css.icon} stroke-width="1" />
+            <li className={css.shopIcon} onClick={Basket}>
+                <GrShop className={css.icon} strokeWidth="1" />
+            </li>
+            <li className={css.menu} onClick={MenuOpen}>
+              <MdOutlineMenu className={css.menu} /> 
             </li>
           </ul>
         </div>

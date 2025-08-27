@@ -3,6 +3,11 @@
     display: flex;
     align-items: center;
     justify-self: center;
+    transition: 0.2s ease-in-out;
+}
+
+.picCont:hover {
+    transform: scale(1.2);
 }
 
 .line{
@@ -20,6 +25,7 @@
     width: 346px;
     border: 2px solid white;
     position: relative;
+    overflow: hidden;
 }
 
 .textBlock {
@@ -40,7 +46,8 @@
 }
 
 .btn {
-    background-color: none;
+    cursor: pointer;
+    background-color: var(--dark);
     width: 256px;
     padding: 16px;
     display: flex;
