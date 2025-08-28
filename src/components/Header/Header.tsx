@@ -6,9 +6,10 @@ import { MdOutlineMenu } from "react-icons/md";
 type HeaderProps = {
   Basket: () => void;
   MenuOpen: () => void;
+  items: number;
 };
 
-function Header({ Basket, MenuOpen }: HeaderProps) {
+function Header({ Basket, MenuOpen, items }: HeaderProps) {
 
   return (
     <div className={css.navBar}>
@@ -37,6 +38,9 @@ function Header({ Basket, MenuOpen }: HeaderProps) {
             </li>
             <li className={css.shopIcon} onClick={Basket}>
                 <GrShop className={css.icon} strokeWidth="1" />
+                <div className={css.ItemsCount}>
+                  {items}
+                </div>
             </li>
             <li className={css.menu} onClick={MenuOpen}>
               <MdOutlineMenu className={css.menu} /> 

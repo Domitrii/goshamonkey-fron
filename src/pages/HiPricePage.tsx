@@ -1,11 +1,14 @@
 
 import HiPrice from "../components/HiPrice/HiPrice"
 
+type HiProp = {
+  addItem: (item: {img: string, text: string, price: string, index: string, inx: number}) => void
+}
 
-function HiPricePage() {
+function HiPricePage({addItem}: HiProp) {
   return (
     <div>
-      <HiPrice />
+      <HiPrice addItem={addItem} />
     </div>
   )
 }

@@ -1,11 +1,15 @@
 import css from "./CoursesContent.module.css"
 
-function CoursesContent() {
+type courseProp = {
+  addItem: (item: {img: string, text: string, price: string, index: string, inx: number}) => void
+}
+
+function CoursesContent({addItem}: courseProp) {
   return (
     <div className={css.mainCont}>
         <div className={css.firstCont}>
             <p className={css.blackBack} />
-            <video autoPlay muted loop disablePictureInPicture className={css.firstVid}>
+            <video muted loop playsInline autoPlay preload="none" controls={false} disablePictureInPicture x-webkit-airplay="deny" className={css.firstVid}>
                 <source src="/Сайт1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -17,7 +21,7 @@ function CoursesContent() {
                 <h3>Научись создавать своего собственного вирусного персонажа с нуля!</h3>
                 <span className={css.amount}><span className={css.canceled}>$100.00 <p className={css.line}></p></span> $55.00</span>
                 <div className={css.courseText}>
-                    <button className={css.courseBtn}>🔓 Получить доступ к курсу</button>
+                    <button className={css.courseBtn} onClick={() => addItem({img: "/gosha.png", text: "Персональный курс от Гоши Бомжезьяна", price: "$55.00", index: "courses", inx: Date.now() + Math.floor(Math.random() * 10000), })}>🔓 Получить доступ к курсу</button>
                     <p>🔥 Курс, который тебе нужен, чтобы взорвать соцсети с помощью своего ИИ-персонажа. С более чем 100 тысячами подписчиков в TikTok Гоша-Бомжезьян показывает шаг за шагом, как он это сделал... и как можешь сделать ты.</p>
                 </div>
 
@@ -64,7 +68,7 @@ function CoursesContent() {
                 <span className={css.amount}><span className={css.canceled}>$600 USD <p className={css.line}></p></span> $350.00 USD</span>
 
                 <div className={css.courseText}>
-                    <button className={css.courseBtn}>🔓 Получить доступ к курсу</button>
+                    <button className={css.courseBtn} onClick={() => addItem({img: "/goshaPremium.png", text: "Премиальный курс от Гоши Бомжезьяна", price: "$350.00", index: "courses", inx: Date.now() + Math.floor(Math.random() * 10000), })}>🔓 Получить доступ к курсу</button>
 
                     <p>🚀 Самая полная версия курса: учись, создавай, запускай в вирус и зарабатывай вместе с нами.</p>
                 </div>

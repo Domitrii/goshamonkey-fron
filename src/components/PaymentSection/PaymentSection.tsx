@@ -5,9 +5,10 @@ type PaymentProps = {
     text: string;
     price: string;
     index: string;
+    addItem: () => void;
 }
 
-function PaymentSection ({ img, text, price, index }: PaymentProps) {
+function PaymentSection ({ img, text, price, index, addItem }: PaymentProps) {
 
   return (
     <li className={css.Payment}>
@@ -21,7 +22,7 @@ function PaymentSection ({ img, text, price, index }: PaymentProps) {
             <div className={css.Payment__Content__Price}>
                 {price}
             </div>
-            <button className={css.Payment__Content__Btn}>Выбрать Привет</button>
+            <button className={css.Payment__Content__Btn} onClick={addItem}>Выбрать Привет</button>
         </div>
     </li>
   )

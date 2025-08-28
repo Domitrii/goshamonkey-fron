@@ -12,6 +12,7 @@ type AddItemProps = {
 function FirstPage({ addItem }: AddItemProps) {
   return (
     <div className="first">
+      <div className="backPic" />
         <Main />
         <Courses />
         <Products addItem={addItem}/>

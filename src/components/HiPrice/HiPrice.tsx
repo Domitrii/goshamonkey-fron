@@ -3,15 +3,19 @@ import PaymentSection from "../PaymentSection/PaymentSection"
 import css from "./HiPrice.module.css"
 
 const hiProducts = [
-    {img: "../../../firstHi.png",text: "Персональный привет от Гоши Бомжезьяна",price: "$7.99",index: "hi-price"},
-    {img: "../../../secondHiLeha.png",text: "Персональный привет от Лёхи",price: "$7.99",index: "hi-price"},
-    {img: "../../../zefirkaHI.png",text: "Персональный привет от Зефирки",price: "$7.99",index: "hi-price"},
-    {img: "../../../G_L_Hi.png",text: "Персональный привет от Гоши Бомжезьяна и Лёхи",price: "$7.99",index: "hi-price"},
-    {img: "../../../All_Hi.png",text: "Привет от Гоши Бомжезьяна и друзей",price: "$7.99",index: "hi-price"},
-    {img: "../../../question-mark.png",text: "Закажи персональный привет от кого захочешь",price: "$7.99",index: "hi-price"},
+    {img: "../../../firstHi.png",text: "Персональный привет от Гоши Бомжезьяна",price: "$7.99",index: "hi-price", inx: 0},
+    {img: "../../../secondHiLeha.png",text: "Персональный привет от Лёхи",price: "$7.99",index: "hi-price", inx: 1},
+    {img: "../../../zefirkaHI.png",text: "Персональный привет от Зефирки",price: "$7.99",index: "hi-price", inx: 2},
+    {img: "../../../G_L_Hi.png",text: "Персональный привет от Гоши Бомжезьяна и Лёхи",price: "$7.99",index: "hi-price", inx: 3},
+    {img: "../../../All_Hi.png",text: "Привет от Гоши Бомжезьяна и друзей",price: "$7.99",index: "hi-price", inx: 4},
+    {img: "../../../question-mark.png",text: "Закажи персональный привет от кого захочешь",price: "$7.99",index: "hi-price", inx: 5},
 ]
 
-function HiPrice() {
+type HiProp = {
+  addItem: (item: {img: string, text: string, price: string, index: string, inx: number}) => void
+}
+
+function HiPrice({addItem}: HiProp) {
   return (
     <div>
         <div>
@@ -27,6 +31,7 @@ function HiPrice() {
                         text={i.text}
                         price={i.price}
                         index={i.index}
+                        addItem={() => addItem({ img: i.img, text: i.text, price: i.price, index: i.index, inx: Date.now() + Math.random() })}
                     />)) }
             </ul>
         </div>

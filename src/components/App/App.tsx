@@ -21,22 +21,22 @@ function App() {
   const [isBasketSum, setBasketSum] = useState(0)
   const [isMenu, setMenu] = useState(false)
 
-const toggleBasket = () => setBasketOpen(prev => !prev);
+  const toggleBasket = () => setBasketOpen(prev => !prev);
 
-const addItemToBasket = (item: Item) => {
-  setSelectedItemArray(currentItems => [...currentItems, item])
-  const priceInCents = Math.round(Number(item.price.slice(1)) * 100)
-  setBasketSum(prev => prev + priceInCents)
-} 
+  const addItemToBasket = (item: Item) => {
+    setSelectedItemArray(currentItems => [...currentItems, item])
+    const priceInCents = Math.round(Number(item.price.slice(1)) * 100)
+    setBasketSum(prev => prev + priceInCents)
+  } 
 
-const deleteByIndex = (inx: number, price: string) => {
-  setSelectedItemArray(prev => prev.filter((n) => n.inx !== inx))
-  const priceInCents = Math.round(Number(price.slice(1)) * 100)
-  setBasketSum(prev => prev - priceInCents)
-}
+  const deleteByIndex = (inx: number, price: string) => {
+    setSelectedItemArray(prev => prev.filter((n) => n.inx !== inx))
+    const priceInCents = Math.round(Number(price.slice(1)) * 100)
+    setBasketSum(prev => prev - priceInCents)
+  }
 
-const handleOpenMenu = () => setMenu(true)
-const handleCloseMenu = () => setMenu(false)
+  const handleOpenMenu = () => setMenu(true)
+  const handleCloseMenu = () => setMenu(false)
 
   // useEffect(() => {
   //   console.log(isBasketSum / 100)
@@ -61,11 +61,11 @@ const handleCloseMenu = () => setMenu(false)
   return (
     <div>
       <BrowserRouter>
-        <Header Basket={toggleBasket} MenuOpen={handleOpenMenu} />
+        <Header Basket={toggleBasket} MenuOpen={handleOpenMenu} items={isSelectedItemArray.length} />
         <Routes>
           <Route path="/" element={<FirstPage addItem={addItemToBasket} />} />
-          <Route path="/hi-price" element={<HiPricePage />} />
-          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/hi-price" element={<HiPricePage addItem={addItemToBasket} />} />
+          <Route path="/courses" element={<CoursesPage addItem={addItemToBasket} />} />
         </Routes>
       <BasketPage isBasketOpen={isBasketOpen} Basket={toggleBasket} SelectedItemArray={isSelectedItemArray} forDelete={deleteByIndex} sum={isBasketSum} />
       <Menu menu={isMenu} closeMenu={handleCloseMenu} />

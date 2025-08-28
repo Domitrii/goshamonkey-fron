@@ -147,6 +147,14 @@
         margin-top: 40px;
     }
 
+    .firstCont div img {
+        width: 300px;
+    }
+
+    .secondCont div img {
+        width: 300px;
+    }
+
     .courseFirstText{
         display: flex;
         margin: 0 auto;
@@ -174,6 +182,7 @@
         font-size: 20px;
         margin: 0 auto;
         margin-bottom: 40px;
+        width: max-content;
     }
 
     .amount{
