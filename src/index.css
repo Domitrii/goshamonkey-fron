@@ -28,7 +28,7 @@ ul {
     background-position: 0 50%;
 }
 
-@media screen and (min-width: 380px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
 
     .first {
         background-size: auto;
@@ -49,4 +49,9 @@ video {
   
   /* Fix for some mobile browsers */
   -webkit-playsinline: true;
+}
+
+/* For older iOS versions */
+video::-webkit-media-controls {
+  display: none !important;
 }

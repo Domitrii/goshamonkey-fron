@@ -49,5 +49,20 @@
 
 
 .Payment__Content__Btn{
-    margin-top: auto;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 200px;
+    transform: translateX(-60%);
+    background: none;
+    margin: auto 20px;
+    border-radius: 16px;
+    border: 1px solid rgb(255, 217, 102);
+    color: rgb(255, 217, 102);
+    padding: 8px;
+}
+
+.Payment__Content__Btn:hover {
+    color: black;
+    background-color: rgb(255, 217, 102);
 }

@@ -1,7 +1,4 @@
 import css from './PaymentSection.module.css'
-// import dotenv from 'dotenv';
-
-// dotenv.config();
 
 type PaymentProps = {
     img: string;
