@@ -55,9 +55,9 @@ function CoursesContent({addItem}: courseProp) {
         </div>
         <div className={css.secondCont}>
             <p className={css.blackBack} />
-            <video autoPlay muted loop className={css.firstVid}>
-              <source src="/Сайт2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+            <video muted loop playsInline autoPlay preload="none" controls={false} disablePictureInPicture x-webkit-airplay="deny" className={css.firstVid}>
+                <source src="/Сайт2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
             </video>
             <div className={css.imgBlock}>
                 <img src="/goshaPremium.png" alt="второй курс" />
