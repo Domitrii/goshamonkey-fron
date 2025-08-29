@@ -20,11 +20,17 @@
     position: absolute;
     z-index: 9;
     pointer-events: none;
-    -webkit-touch-callout: none; /* Disable iOS callout */
-    -webkit-user-select: none; /* Disable text selection */
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-playsinline: true;
+    user-select: none;
+}
+
+.firstVid::-webkit-media-controls {
+  display: none !important;
 }
 
 .firstCont {
