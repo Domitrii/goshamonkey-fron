@@ -2,13 +2,13 @@ import css from './PaymentSection.module.css'
 
 type PaymentProps = {
     img: string;
-    text: string;
+    title: string;
     price: string;
     index: string;
     addItem: () => void;
 }
 
-function PaymentSection ({ img, text, price, index, addItem }: PaymentProps) {
+function PaymentSection ({ img, title, price, index, addItem }: PaymentProps) {
 
   return (
     <li className={css.Payment}>
@@ -17,7 +17,7 @@ function PaymentSection ({ img, text, price, index, addItem }: PaymentProps) {
         </div>
         <div className={css.Payment__Content}> 
             <div className={css.Payment__Content__Text}>
-                {text}
+                {title}
             </div>
             <div className={css.Payment__Content__Price}>
                 {price}
