@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { lazy, useEffect, useState } from "react"
+import { ToastContainer, toast } from 'react-toastify';
 const Menu = lazy(() => import("../Menu/Menu"))
 const BasketPage = lazy(() => import("../BascetPage/BasketPage"))
 const Header = lazy(() => import("../Header/Header"))
 const HiPricePage = lazy(() => import('../../pages/HiPricePage'))
 const FirstPage = lazy(() => import('../../pages/FirstPage'))
 const CoursesPage = lazy(() => import('../../pages/CoursesPage'))
+
 
 type Item = {
   img: string,
@@ -21,11 +23,14 @@ function App() {
   const [isBasketSum, setBasketSum] = useState(0)
   const [isMenu, setMenu] = useState(false)
 
+  const notify = () => toast("Вы добавили товар в корзину!");
+
   const toggleBasket = () => setBasketOpen(prev => !prev);
 
   const addItemToBasket = (item: Item) => {
     setSelectedItemArray(currentItems => [...currentItems, item])
     const priceInCents = Math.round(Number(item.price.slice(1)) * 100)
+    notify()
     setBasketSum(prev => prev + priceInCents)
   } 
 
@@ -67,9 +72,10 @@ function App() {
           <Route path="/hi-price" element={<HiPricePage addItem={addItemToBasket} />} />
           <Route path="/courses" element={<CoursesPage addItem={addItemToBasket} />} />
         </Routes>
-      <BasketPage isBasketOpen={isBasketOpen} Basket={toggleBasket} SelectedItemArray={isSelectedItemArray} forDelete={deleteByIndex} sum={isBasketSum} />
-      <Menu menu={isMenu} closeMenu={handleCloseMenu} />
-      </BrowserRouter>
+        <BasketPage isBasketOpen={isBasketOpen} Basket={toggleBasket} SelectedItemArray={isSelectedItemArray} forDelete={deleteByIndex} sum={isBasketSum} />
+        <Menu menu={isMenu} closeMenu={handleCloseMenu} />
+        <ToastContainer style={{ left: "50%", transform: "translateX(-50%)" }} />
+        </BrowserRouter>
     </div>
   );
 }
